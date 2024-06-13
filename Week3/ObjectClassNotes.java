@@ -4,8 +4,19 @@ package Week3;
 // Every class is a descendent, direct or indirect, of the Object class
 import java.lang.Object;
 
-public class ObjectClassNotes implements Cloneable
+public class ObjectClassNotes
 {
+    /**
+     * 
+     */
+    public static void main(String[] args) 
+    {
+        Dog dog = new Dog("arf arf arf", true);
+        Dog dog1 = dog.clone();
+        System.out.println(dog.getFetch() + "\n");
+        System.out.println(dog1.getFetch());
+    }
+
     /*
      * Every class used inherits the instance methods of Object. You may
      * not need them regularly, but learning how to override them can make
@@ -45,33 +56,27 @@ public class ObjectClassNotes implements Cloneable
      * We will now write an actual clone method
      */
 
-    /**
-     * @param args This is the main method of our notes.
+    // Deep Copy vs Shallow Copy
+    /*
+     * Means the original object and the clone are not independent
+     * 
+     * Decoupling them requires you to override the clone so that it clones 
+     * the object and ObjExternal; Then, the original object references 
+     * ObjExternal
+     * 
+     * The clone references a clone of ObjExternal, so that the object and its
+     * clone are truly independent
+     * 
+     * Shallow copy is stored in the same spot in memory, Deep copy is different
      */
-    public static void main(String[] args)
-    {
-        Dog dog = new Dog("ruhruhruhruh", false);
-        dog1 = dog.clone();
-    }
-    
-    /**
-     * @return Returns a clone of the dog object
+
+    // Equals() method
+    /*
+     * Compares two objects for equality and returns true if they are equal; 
+     * method provided by the Object class uses == to determine whether the 
+     * two objects are equal
+     * 
+     * Works primarily for primitive types, but for Objects, it checks if the 
+     * reference values are equal or not
      */
-    public Dog clone() 
-    {
-        Dog dog1;
-        try 
-        {
-            dog1 = (Dog) super.clone();
-        }
-        catch (CloneNotSupportedException e) 
-        {
-            throw new RuntimeException("No Cloneable Implemented");
-        }
-        finally 
-        {
-            System.out.println("This example is over!");
-        }
-        return dog1;
-    }
 }

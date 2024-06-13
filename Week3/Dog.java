@@ -1,6 +1,6 @@
 package Week3;
 
-public class Dog 
+public class Dog implements Cloneable
 {
     // Primary use of class is for examples in notes
 
@@ -56,5 +56,41 @@ public class Dog
     public boolean getFetch() 
     {
         return this.fetch;
+    }
+
+    /**
+     * @return Returns a clone of the dog object
+     */
+    public Dog clone() 
+    {
+        Dog dog1;
+        try 
+        {
+            dog1 = (Dog) super.clone();
+        }
+        catch (CloneNotSupportedException e) 
+        {
+            throw new RuntimeException("No Cloneable Implemented");
+        }
+        finally 
+        {
+            System.out.println("This example is over!");
+        }
+        return dog1;
+    }
+
+    /**
+     * @return Returns if the objects are the same or not
+     */
+    public boolean equals(Dog dog) 
+    {
+        if (dog instanceof Dog) 
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
 }
