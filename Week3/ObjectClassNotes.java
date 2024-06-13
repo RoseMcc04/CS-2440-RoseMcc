@@ -4,7 +4,7 @@ package Week3;
 // Every class is a descendent, direct or indirect, of the Object class
 import java.lang.Object;
 
-public class ObjectClassNotes 
+public class ObjectClassNotes implements Cloneable
 {
     /*
      * Every class used inherits the instance methods of Object. You may
@@ -31,4 +31,38 @@ public class ObjectClassNotes
      * 
      * public String toString() --> returns a String representation of an object
      */
+
+    // Clone:
+    /*
+     * clone() will implement the Cloneable interface
+     * 
+     * Object's use of the clone method creates an object with the same class
+     * as the original object; initializes new object's member variables to have
+     * the same values as the original object's member variables
+     * 
+     * for class header, write "implements Cloneable"
+     * 
+     * We will now write an actual clone method
+     */
+
+    /**
+     * @return Returns a clone of the dog object
+     */
+    public Dog clone() 
+    {
+        Dog dog1;
+        try 
+        {
+            dog1 = (Dog) super.clone();
+        }
+        catch (CloneNotSupportedException e) 
+        {
+            throw new RuntimeException("No Cloneable Implemented");
+        }
+        finally 
+        {
+            System.out.println("This example is over!");
+        }
+        return dog1;
+    }
 }
