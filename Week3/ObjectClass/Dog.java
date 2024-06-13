@@ -101,4 +101,12 @@ public class Dog implements Cloneable
             return false;
         }
     }
+
+    /**
+     * @return Returns string describing the Dog
+     */
+    public String toString() 
+    {
+        return "Bark: " + this.bark + ", Fetch: " + this.fetch;
+    }
 }

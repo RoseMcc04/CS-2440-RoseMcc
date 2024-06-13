@@ -10,11 +10,17 @@ public class ObjectClassNotes
     public static void main(String[] args) 
     {
         Dog dog = new Dog("arf arf arf", true);
+        // Implementing clone() method for Dog dog1
         Dog dog1 = dog.clone();
-        Dog dog2 = dog;
+        Dog dog2 = new Dog("arf arf arf", false);
+        // Implementing equals() method for logical comparisons
         System.out.println(dog.equals(dog1));
         System.out.println(dog.equals(dog2));
         System.out.println(dog1.equals(dog2));
+        // Implementing toString() to see results
+        System.out.println(dog.toString());
+        System.out.println(dog1.toString());
+        System.out.println(dog2.toString());
     }
 
     /*
@@ -43,7 +49,7 @@ public class ObjectClassNotes
      * public String toString() --> returns a String representation of an object
      */
 
-    // Clone:
+    // clone():
     /*
      * clone() will implement the Cloneable interface
      * 
@@ -56,7 +62,7 @@ public class ObjectClassNotes
      * We will now write an actual clone method
      */
 
-    // Deep Copy vs Shallow Copy
+    // Deep Copy vs Shallow Copy:
     /*
      * Means the original object and the clone are not independent
      * 
@@ -70,7 +76,7 @@ public class ObjectClassNotes
      * Shallow copy is stored in the same spot in memory, Deep copy is different
      */
 
-    // Equals() method
+    // equals():
     /*
      * Compares two objects for equality and returns true if they are equal; 
      * method provided by the Object class uses == to determine whether the 
@@ -80,10 +86,25 @@ public class ObjectClassNotes
      * reference values are equal or not
      */
 
-    // HashCode:
+    // HashCode():
     /*
      * Not too worried for now since this is CS 2440 and not CS 3460
      * 
+     * We do understand that HashCode returns the HashCode of an Object, but we
+     * are not in that scope yet.
+     */
+
+    // toString():
+    /*
+     * extremely useful, particularly in debugging
      * 
+     * If you send an object reference to the System.out.println() method, 
+     * Java calls the toString() method on that object and prints the String
+     * that gets returned
+     * 
+     * For general Object toString(), the method will return '@' and then a
+     * hexidecimal representation of the object, however, this is not useful
+     * 
+     * This means that we can create toString() methods in another class
      */
 }
