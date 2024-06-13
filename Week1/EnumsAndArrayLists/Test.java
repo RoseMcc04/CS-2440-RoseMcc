@@ -4,6 +4,6 @@ public class Test
 {
     public enum Status
     {
-        FAILED, PASSED
+        FAILED, PASSED;
     }
 }
