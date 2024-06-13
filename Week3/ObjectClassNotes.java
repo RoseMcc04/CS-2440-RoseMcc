@@ -46,6 +46,15 @@ public class ObjectClassNotes implements Cloneable
      */
 
     /**
+     * @param args This is the main method of our notes.
+     */
+    public static void main(String[] args)
+    {
+        Dog dog = new Dog("ruhruhruhruh", false);
+        dog1 = dog.clone();
+    }
+    
+    /**
      * @return Returns a clone of the dog object
      */
     public Dog clone() 
