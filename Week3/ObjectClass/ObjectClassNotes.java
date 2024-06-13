@@ -1,9 +1,7 @@
-package Week3;
+package Week3.ObjectClass;
 
 // Found in the java.lang package and sits at top of class heirarchy tree
 // Every class is a descendent, direct or indirect, of the Object class
-import java.lang.Object;
-
 public class ObjectClassNotes
 {
     /**
@@ -13,8 +11,10 @@ public class ObjectClassNotes
     {
         Dog dog = new Dog("arf arf arf", true);
         Dog dog1 = dog.clone();
-        System.out.println(dog.getFetch() + "\n");
-        System.out.println(dog1.getFetch());
+        Dog dog2 = dog;
+        System.out.println(dog.equals(dog1));
+        System.out.println(dog.equals(dog2));
+        System.out.println(dog1.equals(dog2));
     }
 
     /*
@@ -78,5 +78,12 @@ public class ObjectClassNotes
      * 
      * Works primarily for primitive types, but for Objects, it checks if the 
      * reference values are equal or not
+     */
+
+    // HashCode:
+    /*
+     * Not too worried for now since this is CS 2440 and not CS 3460
+     * 
+     * 
      */
 }

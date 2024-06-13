@@ -1,4 +1,4 @@
-package Week3;
+package Week3.ObjectClass;
 
 public class Dog implements Cloneable
 {
@@ -84,9 +84,17 @@ public class Dog implements Cloneable
      */
     public boolean equals(Dog dog) 
     {
+        // instanceof helps determine if "dog" is an instance of the Dog class
         if (dog instanceof Dog) 
         {
-            return true;
+            /*
+             * another way is return Var.equals(((Dog)dog).getVar())
+             * 
+             * Var could be any field of the object we are looking at
+             */
+
+            Dog dog1 = (Dog) dog;
+            return (dog1.bark == bark) && (dog1.fetch == fetch);
         }
         else 
         {
