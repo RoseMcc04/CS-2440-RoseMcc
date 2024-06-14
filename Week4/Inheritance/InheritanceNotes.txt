@@ -16,3 +16,30 @@ Extended Classes
 - Methods and fields added to subclass will only be accessible to 
 that class or its subclasses
 - For our example, we can call Clock methods on an instance of CuckooClock
+
+Protected Members
+
+- Besides public and private, we also have an access modifier called Protected
+    - Protected memory can only be accessed by its original class and subclasses
+
+Private Members
+- Private member is inherited by any subclass of the superclass
+- However, a subclass cannot directly access a private attribute 
+  of the superclass 
+    - The member still exists for the subclass in memory
+
+Constructors
+
+- A subclass can have its own Constructors
+    - If no constructor is declared, it may use a no-arg constructor inherited
+      from the superclass
+    - If one is declared, then it loses access to the superclass's no-arg
+      Constructors
+- Superclass constructors with arguments are not inherited
+- If a subclass adds its own instance fields, the inherited no-arg constructor
+  sets those to the default values, then does the work of the superclass's no-arg\
+  constructor
+
+Overriding Methods
+
+- 

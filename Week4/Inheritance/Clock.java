@@ -36,9 +36,14 @@ public class Clock
      */
     public static void main(String[] args) 
     {
+        // A subclass may be used where the superclass is expected
         CuckooClock cuckoo = new CuckooClock();
-        cuckoo.setTime(10, 50, true);
+        cuckoo.setTime(10, 0, true);
         System.out.println(cuckoo.isCuckooing());
+
+        ArrayList<Clock> clocks = new ArrayList<>();
+        clocks.add(cuckoo);
+        System.out.println(clocks.toString());
     }
 
     /**
