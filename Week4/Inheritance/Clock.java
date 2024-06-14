@@ -106,14 +106,14 @@ public class Clock
      * @param clocks A vector of Clock objects
      * @return Returns if some Clocks are timed in the morning or not
      */
-    public ArrayList<Boolean> someMorning(Vector<Clock> clocks) 
+    public ArrayList<Clock> someMorning(Vector<Clock> clocks) 
     {
-        ArrayList<Boolean> newList = new ArrayList<>();
+        ArrayList<Clock> newList = new ArrayList<>();
         for (int i = 0; i < clocks.size(); i++) 
         {
             if (clocks.get(i).isMorning()) 
             {
-                newList.add(clocks.get(i).isMorning());
+                newList.add(clocks.get(i));
             }
         }
         return newList;
