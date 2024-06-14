@@ -37,9 +37,45 @@ Constructors
       Constructors
 - Superclass constructors with arguments are not inherited
 - If a subclass adds its own instance fields, the inherited no-arg constructor
-  sets those to the default values, then does the work of the superclass's no-arg\
+  sets those to the default values, then does the work of the superclass's no-arg
   constructor
 
 Overriding Methods
 
-- 
+- In some cases, a subclass may need to implement an inherited differently than its
+  than its superclass
+- We can override a method in the subclass
+    - A method is overridden when the subclass declares a method with the same 
+      signature
+
+Covariant
+
+- An overridden method can have a different return in the subclass's 
+  implementation
+- The return type may be a descendent of the return type of the original method
+    - The clone() method is a primary example
+
+Widening Conversions
+
+- We can assign an instance of a subclass to a reference variable of its 
+  superclass
+// Clock c = new Clock24();
+- c has a static type of Clock, but a dynamic type of Clock24
+- We can only call methods that belong to the static type of a variable
+- Java performs dynamic method activation to perform the instance's version of
+  that method
+    - The Java runtime checks the dynamic type of a variable
+    - If the dynamic type has its own version of a method, its version is executed
+      instead
+// Clock c1 = new CuckooClock();
+c1.isCuckooing(); // compilation error!
+Clock c2 = new Clock24();
+c2.getHour(); // calls Clock24's getHour()
+
+Narrowing Conversions
+
+- Assignments from a superclass dynamic type to a subclass static type are allowed
+    - We must cast the superclass to the subclass type to avoid a compilation error
+    - Even then, its possible to still get a runtime error
+// Clock c = new Clock();
+// CuckooClock cuckoo = (CuckooClock) c; --> runtime error!
