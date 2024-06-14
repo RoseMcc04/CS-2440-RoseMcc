@@ -1,0 +1,17 @@
+**Clock.java, CuckooClock.java, and Clock24.java are just used as
+Inheritance examples. The main notes will be on here. 
+
+What is Inheritance?
+
+- Inheritance --> a new class derives attributes and behaviors from
+                  an existing class
+    - The new class is called the subclass
+    - The existing class is called the superclass
+- Inheritance is used to extend the functionality of the clases
+
+Extended Classes
+
+- Subclass inherits the fields and methods from the superclass
+    - We call these inherited methods and fields
+- Methods and fields added to subclass will only be accessible to 
+that class or its subclasses
