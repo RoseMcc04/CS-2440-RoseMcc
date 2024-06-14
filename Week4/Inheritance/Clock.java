@@ -1,6 +1,7 @@
 package Week4.Inheritance;
 
 import java.util.Vector;
+import java.util.ArrayList;
 
 public class Clock 
 {
@@ -28,6 +29,16 @@ public class Clock
         this.hour = hour;
         this.minute = minute;
         this.morning = morning;
+    }
+
+    /**
+     * @param args This is the main method of Clock.java
+     */
+    public static void main(String[] args) 
+    {
+        CuckooClock cuckoo = new CuckooClock();
+        cuckoo.setTime(10, 50, true);
+        System.out.println(cuckoo.isCuckooing());
     }
 
     /**
@@ -95,8 +106,16 @@ public class Clock
      * @param clocks A vector of Clock objects
      * @return Returns if some Clocks are timed in the morning or not
      */
-    public boolean someMorning(Vector<T> clocks) 
+    public ArrayList<Boolean> someMorning(Vector<Clock> clocks) 
     {
-        
+        ArrayList<Boolean> newList = new ArrayList<>();
+        for (int i = 0; i < clocks.size(); i++) 
+        {
+            if (clocks.get(i).isMorning()) 
+            {
+                newList.add(clocks.get(i).isMorning());
+            }
+        }
+        return newList;
     }
 }

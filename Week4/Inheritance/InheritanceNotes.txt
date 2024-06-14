@@ -15,3 +15,4 @@ Extended Classes
     - We call these inherited methods and fields
 - Methods and fields added to subclass will only be accessible to 
 that class or its subclasses
+- For our example, we can call Clock methods on an instance of CuckooClock

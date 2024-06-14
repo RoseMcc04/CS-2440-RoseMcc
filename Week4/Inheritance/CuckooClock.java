@@ -7,6 +7,13 @@ public class CuckooClock extends Clock
      */
     public boolean isCuckooing() 
     {
-
+        if (getMinute() == 0) 
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
 }
