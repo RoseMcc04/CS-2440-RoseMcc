@@ -1,1 +1,5 @@
-future notes for abstract classes
+Abstract Classes
+- Sometimes, you will have a larger software system that has multiple classes with
+  minute differences
+- We can properly perform this task by creating a superclass and implementing those
+  methods in its respective subclasses
