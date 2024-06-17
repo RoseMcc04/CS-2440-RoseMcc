@@ -1,6 +1,26 @@
 Abstract Classes
+
 - Sometimes, you will have a larger software system that has multiple classes with
   minute differences
 - We can properly perform this task by creating a superclass and implementing those
   methods in its respective subclasses
-- 
+- You can force the subclasses to use methods by the superclass by making them abstract, 
+  along with the superclass being an abstract class
+
+Interfaces
+
+- Similar to the idea of a completely abstract class
+- List of related methods that are specified, but not implemented
+- A class can implement an interface by writing the methods
+
+instanceof
+
+- Keyword used on an object at runtime to see if the object implements the interface
+- You have to cast the object before calling other methods
+
+Inheritance in UML (Unified Modeling Language)
+
+- To illustrate inheritance in UML diagrams, a subclass is connected to its superclass
+  with a line that has an open arrowhead at the point toward the superclass
+- To illustrate an abstract class, you put the notation "<<interface>>" and write the
+  abstract methods in italics
