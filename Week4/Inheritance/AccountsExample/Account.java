@@ -6,6 +6,14 @@ public class Account
     private double balance;
     
     /**
+     * 
+     */
+    public Account() 
+    {
+        
+    }
+
+    /**
      * @param accountNumber
      * @param balance
      */
