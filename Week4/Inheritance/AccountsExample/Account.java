@@ -3,14 +3,15 @@ package Week4.Inheritance.AccountsExample;
 public class Account 
 {
     private String accountNumber;
-    private double balance;
+    protected double balance;
     
     /**
      * 
      */
     public Account() 
     {
-        
+        accountNumber = 0;
+        balance = 0;
     }
 
     /**
@@ -40,5 +41,13 @@ public class Account
         {
             balance -= amount;
         }
+    }
+
+    /**
+     * 
+     */
+    public void display() 
+    {
+        System.out.println(accountNumber + " balance: $" + balance);
     }
 }
