@@ -9,8 +9,13 @@ public class SavingsAccount extends Account
         interestRate = 0.03;
     }
 
-    public void applyInterest() 
+    public double applyInterest() 
     {
-        balance += balance * interestRate;
+        return balance += balance * interestRate;
+    }
+
+    public void display() 
+    {
+        System.out.println("Balance: " + balance + ", Rate: " + interestRate);
     }
 }

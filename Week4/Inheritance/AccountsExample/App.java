@@ -1,5 +1,6 @@
 package Week4.Inheritance.AccountsExample;
 
+import java.util.ArrayList;
 public class App 
 {
     public static void main(String[] args) 
@@ -13,5 +14,10 @@ public class App
         savings.deposit(20.00);
         savings.applyInterest();
         savings.display();
-    }    
+
+        ArrayList<Account> list = new ArrayList<>();
+        list.add(checking);
+        list.add(savings);
+        System.out.println(list.toString());
+    }   
 }

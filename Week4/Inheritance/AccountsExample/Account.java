@@ -1,6 +1,6 @@
 package Week4.Inheritance.AccountsExample;
 
-public class Account 
+public abstract class Account 
 {
     private long accountNumber;
     protected double balance;
@@ -45,9 +45,8 @@ public class Account
 
     /**
      * This method displays the account number with the balance.
+     * 
+     * Abstract methods should not have an associated body
      */
-    public void display() 
-    {
-        System.out.println(accountNumber + " balance: $" + balance);
-    }
+    public abstract void display();
 }

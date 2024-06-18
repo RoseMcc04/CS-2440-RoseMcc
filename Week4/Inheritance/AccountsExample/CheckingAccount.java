@@ -25,4 +25,9 @@ public class CheckingAccount extends Account
     {
         balance -= amount;
     }
+
+    public void display() 
+    {
+        System.out.println("Balance: " + balance + ", Fee: " + fee);
+    }
 }
