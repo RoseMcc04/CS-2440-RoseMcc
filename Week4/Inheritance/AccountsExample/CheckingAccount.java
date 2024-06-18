@@ -18,4 +18,13 @@ public class CheckingAccount extends Account
     {
         balance -= fee;
     }
+
+    /**
+     * 
+     */
+    @Override
+    public void withdraw(double amount) 
+    {
+        
+    }
 }
