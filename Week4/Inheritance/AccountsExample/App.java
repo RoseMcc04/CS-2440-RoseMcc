@@ -4,7 +4,7 @@ public class App
 {
     public static void main(String[] args) 
     {
-        CheckingAccount checking = new CheckingAccount();
+        CheckingAccount checking = new CheckingAccount(6.75);
         checking.deposit(50.00);
         checking.subtractFee();
         checking.display();

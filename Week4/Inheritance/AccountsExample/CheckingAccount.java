@@ -4,11 +4,9 @@ public class CheckingAccount extends Account
 {
     private double fee;
 
-    public CheckingAccount() 
+    public CheckingAccount(double fee) 
     {
-        // super class no-arg constructor is called
-        // balance is 0
-        fee = 7.50;
+        this.fee = fee;
     }
 
     /**

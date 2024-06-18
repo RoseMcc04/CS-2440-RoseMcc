@@ -1,6 +1,6 @@
 package Week4.Inheritance.AccountsExample;
 
-public class SavingsAccount extends Account;
+public class SavingsAccount extends Account
 {
     private double interestRate;
 
