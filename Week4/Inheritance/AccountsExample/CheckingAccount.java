@@ -8,7 +8,7 @@ public class CheckingAccount extends Account
     {
         // super class no-arg constructor is called
         // balance is 0
-        fee = 0;
+        fee = 7.50;
     }
 
     /**
@@ -20,11 +20,11 @@ public class CheckingAccount extends Account
     }
 
     /**
-     * 
+     * @param amount
      */
     @Override
     public void withdraw(double amount) 
     {
-        
+        balance -= amount;
     }
 }
