@@ -24,3 +24,5 @@ Inheritance in UML (Unified Modeling Language)
   with a line that has an open arrowhead at the point toward the superclass
 - To illustrate an abstract class, you put the notation "<<interface>>" and write the
   abstract methods in italics
+
+** I am using the code files in Inheritance notes to also demonstrate abstract classes
