@@ -1,4 +1,4 @@
-package Week4.Inheritance;
+package Week4.Inheritance.ClockExample;
 
 public class Clock24 extends Clock
 {

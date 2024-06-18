@@ -1,4 +1,4 @@
-package Week4.Inheritance;
+package Week4.Inheritance.ClockExample;
 
 import java.util.Vector;
 import java.util.ArrayList;

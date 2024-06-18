@@ -1,4 +1,4 @@
-package Week4.Inheritance;
+package Week4.Inheritance.AccountsExample;
 
 public class Account 
 {
