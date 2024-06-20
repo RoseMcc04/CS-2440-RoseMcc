@@ -53,3 +53,21 @@ JPanel
     - Items will be inserted left to right
 - Create 
     - Jpanel buttonPanel = new JPane();
+
+JLabel
+
+- Textual information
+- Text can be set with constructor
+- Text can be set with setText(String newText) method
+
+JTextField
+
+- Allows user to enter Text
+- Interpreted as a String type
+- Can either use parseInt or parseDouble in Integer or Double classes
+  that take Strings and return them as ints and doubles
+- Can specify length in the constructor, parameter is number of
+  characters
+- JTextField jtfFirst = new JTextField();
+- String s = jtfFirst.getText();
+- jtfFirst.setText("Hello World");
