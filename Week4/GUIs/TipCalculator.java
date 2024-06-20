@@ -10,6 +10,9 @@ public class TipCalculator
     private JLabel billLabel, totalLabel;
     private JButton tip1, tip2, tip3, calculateButton;
     private JTextField billText;
+    public final double TIP_AMOUNT_1 = 0.18;
+    public final double TIP_AMOUNT_2 = 0.20;
+    public final double TIP_AMOUNT_3 = 0.22;
 
     public TipCalculator() 
     {
@@ -41,12 +44,39 @@ public class TipCalculator
         {
             public void actionPerformed(ActionEvent e) 
             {
-                
+                String bill = billText.getText();
+                Double numericBill = Double.parseDouble(bill);
+                double total = numericBill * (1 + TIP_AMOUNT_1);
+                totalLabel.setText("Total: $" + total);
             }
         };
-        tip1.addActionListener(null);
+        tip1.addActionListener(tip1Listener);
         tip2 = new JButton("20%");
+        // using an ANONYMOUS INNER CLASS
+        ActionListener tip2Listener = new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e) 
+            {
+                String bill = billText.getText();
+                Double numericBill = Double.parseDouble(bill);
+                double total = numericBill * (1 + TIP_AMOUNT_2);
+                totalLabel.setText("Total: $" + total);
+            }
+        };
+        tip2.addActionListener(tip2Listener);
         tip3 = new JButton("22%");
+        // using an ANONYMOUS INNER CLASS
+        ActionListener tip3Listener = new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e) 
+            {
+                String bill = billText.getText();
+                Double numericBill = Double.parseDouble(bill);
+                double total = numericBill * (1 + TIP_AMOUNT_3);
+                totalLabel.setText("Total: $" + total);
+            }
+        };
+        tip3.addActionListener(tip3Listener);
         calculateButton = new JButton("calc");
         center.add(tip1);
         center.add(tip2);
