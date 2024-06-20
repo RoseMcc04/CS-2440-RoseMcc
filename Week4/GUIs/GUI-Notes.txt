@@ -97,3 +97,23 @@ FlowLayout
 - Next component is placed right of the first and both centered
 - Continues until components can no longer fit on a line 
 - Last added component will be centered on the next line 
+
+BorderLayout
+
+- Default for JFrame 
+- Divided into 5 sections: PAGE_START (NORTH), PAGE_END (SOUTH), 
+  LINE_START (WEST), CENTER, and LINE_END (EAST) 
+
+BoxLayout
+
+- More flexible version of FlowLayout
+
+CardLayout
+
+- More complicated layout that allows 2 or more components to 
+  share the same display spaces
+- Allows user to choose between components using a menu
+
+ActionListener 
+
+- 
