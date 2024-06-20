@@ -8,7 +8,7 @@ public class TipCalculator
 {
     private JFrame frame;
     private JLabel billLabel, totalLabel;
-    private JButton tip1, tip2, tip3, calculateButton;
+    private JButton tip1, tip2, tip3;
     private JTextField billText;
     public final double TIP_AMOUNT_1 = 0.18;
     public final double TIP_AMOUNT_2 = 0.20;
@@ -77,11 +77,9 @@ public class TipCalculator
             }
         };
         tip3.addActionListener(tip3Listener);
-        calculateButton = new JButton("calc");
         center.add(tip1);
         center.add(tip2);
         center.add(tip3);
-        center.add(calculateButton);
         frame.add(center, BorderLayout.CENTER);
 
         // South panel
@@ -95,6 +93,13 @@ public class TipCalculator
 
     public static void main(String[] args) 
     {
-        TipCalculator calc = new TipCalculator();
+        try 
+        {
+            TipCalculator calc = new TipCalculator();
+        }
+        catch (Exception e) 
+        {
+            System.out.println("There is something wrong with the GUI.");
+        } 
     }
 }
