@@ -1,0 +1,45 @@
+GUIs (Graphical User Interfaces)
+
+- GUIs allow users to interact with a program using graphical
+  elements such as windows, buttons, and many other features
+- The primary framework used in this course is Swing
+- Swing is part of Oracle's Java Foundation Classes (JFC), which 
+  is an API (Application Program Interface) for making GUIs
+- The package for Swing is javax.swing
+
+Parts of a GUI 
+
+- minimize button --> minimizes the interface size
+- expand button --> maximizes the interface size
+- close button --> closes out of the GUI
+- title bar --> where you put the name of the program
+- label --> specific area of the GUI
+- button --> object when clicked on allows the user to perform a
+             specific 
+- spinner --> object that allows the user to click on arrows to
+              choose a specific parameter
+- frame --> the underlying structure of the interface
+- checkbox --> GUI structure that allows the user to check one or 
+               multiple options out of a list
+- dropdown menu --> allows a dropdown list for the selection of
+                    one item for the user 
+- radio button --> allows the user to specifically pick one options
+                   out of a range of options 
+
+General Steps
+
+1. Declare and allocate a JFrame since it is the window. Then, set 
+   the properties.
+2. Organize GUI components into categories and allocate a JPanel for
+   each category. Decide on a layout manager for each JPanel and use 
+   it to add components to the JPanel.
+3. Pick a layout manager for the JFrame and add the JPanels to the
+   JFrame.
+4. Create and add listeners to the components that require them.
+
+JFrame 
+
+- Basic window
+- Title bar
+- Frame 
+- Minimize, Expand, Close buttons 
