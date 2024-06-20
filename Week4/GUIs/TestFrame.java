@@ -1,7 +1,5 @@
 package Week4.GUIs;
 
-import java.awt.BorderLayout;
-
 // imports JButton object
 import javax.swing.JButton;
 // imports JFrame object
