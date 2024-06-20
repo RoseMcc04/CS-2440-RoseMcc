@@ -71,3 +71,29 @@ JTextField
 - JTextField jtfFirst = new JTextField();
 - String s = jtfFirst.getText();
 - jtfFirst.setText("Hello World");
+
+JButton
+
+- Standard button you can click with a mouse
+- Has text on face
+- Uses ActionListener to detect mouse clicks
+- Create a button with the text Add on its face
+   - JButton jbAdd = new JButton("Add");
+- Usually added to a JPanel instead of the JFrame
+
+Layout Manager
+
+- JFrame testFrmae = new JFrame();
+- JPanel buttonPanel = new JPanel();
+- JButton jbTest = new JButton("Test Me");
+
+- buttonPanel.add(jbTest);
+- testFrame.add(buttonPanel, BorderLayout.PAGE_END);
+
+FlowLayout
+
+- Default for JPanel
+- Components inserted one at a time and centered
+- Next component is placed right of the first and both centered
+- Continues until components can no longer fit on a line 
+- Last added component will be centered on the next line 
