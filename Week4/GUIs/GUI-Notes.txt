@@ -43,3 +43,13 @@ JFrame
 - Title bar
 - Frame 
 - Minimize, Expand, Close buttons 
+- JFrame gameFrame = new JFrame();
+
+JPanel
+
+- Container
+    - Used to align components on the JFrame 
+    - Other items are added to the JPanel 
+    - Items will be inserted left to right
+- Create 
+    - Jpanel buttonPanel = new JPane();
