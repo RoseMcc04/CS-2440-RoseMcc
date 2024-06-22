@@ -116,4 +116,35 @@ CardLayout
 
 ActionListener 
 
-- 
+- There are many listeners in the Java API 
+  - Each listener is an interface with a small number of methods
+    usually implemented in order to implement the interface 
+  - The interface used in CS 2440 is ActionListener 
+- It specifies that you implement one method called actionPerformed
+  with this signature
+  - public void actionPerformed(ActionEvent e)
+  - {
+  -   // code that reacts to said action 
+  - }
+- We often use a button object as the component being listened to
+- In order to actually have this event function, we need to make a 
+  new class that implements the interface
+- You then create an object of this new type and add it to the button's 
+  actionListener method 
+- There are three ways to do this: 
+  1. Have the GUI class itself implement actionListener 
+  2. Put an inner class inside the GUI calass that implements ActionListener 
+  3. Use an anonymous inner class 
+
+Inner Class 
+
+- Make a class inside of another class 
+- An inner class is only used in specific situations:
+  - Will only ever need to be used within the main class 
+  - Access to outer class fields is needed 
+  - Callback from operating system for event handling 
+
+Anonymous Inner Class 
+
+- Class is not given a name 
+- Usually used for event handling 
