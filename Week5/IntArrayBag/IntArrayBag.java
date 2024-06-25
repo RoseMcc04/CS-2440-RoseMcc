@@ -1,6 +1,8 @@
 package Week5.IntArrayBag;
 
+// holds bag elements
 private int[] data;
+// number of elements
 private int manyItems;
 
 public class IntArrayBag implements Cloneable
