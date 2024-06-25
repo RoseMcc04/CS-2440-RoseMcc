@@ -56,6 +56,8 @@ public class IntArrayBag implements Cloneable
             // arithmetic overflow and the bag will fail
             ensureCapacity(manyItems * 2 + 1);
         }
+        data[manyItems] = element;
+        manyItems++;
     }
 
     /**
