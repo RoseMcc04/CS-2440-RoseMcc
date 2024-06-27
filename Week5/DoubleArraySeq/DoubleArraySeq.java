@@ -4,6 +4,8 @@ package Week5.DoubleArraySeq;
 
 public class DoubleArraySeq implements Cloneable
 {
+    private int[] data;
+
     /*
     During notes for IntArrayBag, there is no significance in ordering of
     the elements in the underlying array structure, which means you cannot
@@ -134,6 +136,40 @@ public class DoubleArraySeq implements Cloneable
      */
     public boolean isCurrent() 
     {
-        
+
+    }
+
+    /**
+     * Method that removes the current element
+     */
+    public void removeCurrent() 
+    {
+        /*
+         Removes current element from DoubleArraySeq object and shifts 
+         elements after one index to the left. Current element will be 
+         index of original current plus one (if current is 2, next 
+         current is 3). If the last element is the current removed, there
+         will not be a current element afterward.
+         */
+    }
+
+    /**
+     * @return Returns number of elements in DoubleArraySeq
+     */
+    public int size() 
+    {
+
+    }
+
+    /**
+     * Method that trims the DoubleArraySeq to the size of manyItems
+     */
+    public void trimToSize() 
+    {
+        /*
+        If the data array size is larger than manyitems, make a new array of
+        size manyItems. Copy the elements to the new array, then make data
+        point to the new array. 
+        */
     }
 }
