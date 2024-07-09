@@ -1,4 +1,4 @@
 # CS-2440-RoseMcc
 
-This is a newer notes repository due to a technical situation. I hope to log my notes over time as a form of "time
-capsule" for myself and others in the future.
+These files contain the notes I took during CS-2440, commonly
+known as Computer Science II. I wanted to provide a common resource for myself and my classmates. If you have any questions, you can email me at the address in my profile.
