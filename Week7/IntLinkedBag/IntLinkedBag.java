@@ -67,6 +67,77 @@ public class IntLinkedBag
         *    manyNodes--;
         *    return true;
         * }
-        *
         */
+
+        // Count Occurrences (Without listSearch)
+
+        /*
+         * With listSearch --> 
+         * 
+         * public int countOccurrences(int target) 
+         * {
+         *      int answer;
+         *      IntNode cursor;
+         * 
+         *      answer = 0;
+         *      cursor = IntNode.listSearch(head, target);
+         *      while (cursor != null) 
+         *      {
+         *          // Each time that cursor is not null, we have another 
+         *          // occurrence of target, so we add to answer and then move 
+         *          // cursor to the next occurrence of the target.
+         *          answer++;
+         *          cursor = cursor.getLink();
+         *          cursor = IntNode.listSearch(cursor, target);
+         *      }
+         *      return answer;
+         * }
+         * 
+         * Without listSearch --> 
+         * 
+         * public int countOccurrences(int target)
+         * {
+         *      int answer = 0;
+         *      IntNode cursor = head;
+         *      while (cursor != null) 
+         *      {
+         *          if (cursor.getData() == target) 
+         *          {
+         *              answer++;
+         *          }
+         *          cursor = cursor.getLink();
+         *      }
+         *      return answer;
+         * }
+         */
+
+        // Grab 
+
+        /*
+         * The grab method retrieves a random number between 1 and manyNodes, 
+         * then traverses to said node and returns the data.
+         */
+
+        // New Elements
+        /*
+         * New elements are added to the head due to the efficiency of the 
+         * task.
+         */
+
+        // Union and AddAll
+
+        /*
+         * Union --> static method; passes in two bags and returns their 
+         *           union
+         * 
+         * AddAll --> non-static method; invoked on a bag and adds contents of
+         *            parameter bag to the calling bag
+         */
+
+        // Advantages/Disadvantages
+
+        /*
+         * You do not have to resize a linked list, however, random access
+         * is not possible unlike the array bag.
+         */
 }
