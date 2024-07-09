@@ -6,5 +6,9 @@ package Week7.DoubleLinkedSeq;
  */
 public class DoubleLinkedSeq 
 {
+    // Fields
     
+    /*
+     * 
+     */
 }
