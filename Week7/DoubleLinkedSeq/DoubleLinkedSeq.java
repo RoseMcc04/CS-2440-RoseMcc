@@ -30,6 +30,51 @@ public class DoubleLinkedSeq
       * 4. The current item's reference is stored in the instance variable, 
       *    cursor. If there is not current item, cursor is null.
       *
-      * 5. 
+      * 5. The instance variable, precursor, always is the address of the node
+      *    just prior to the node that cursor references, unless cursor is null
+      *    or equal to head. In those cases, precursor is null.
+      *
+      * 6. If the sequence is empty, all the references are null.
+      *
+      * 7. The number of elements in the sequence is stored in the instance
+      *    variable, manyNodes. 
       */
+
+      // isCurrent()
+
+      /*
+       * One of the methods is isCurrent(). It returns true if there is a 
+       * current item, and false otherwise. How can we detect if there is no
+       * current item? 
+       * 
+       * if (cursor == null)
+       *    return false
+       * else
+       *    return true
+       * 
+       * or 
+       * 
+       * return cursor == null
+       */
+
+       // addBefore() 
+
+       /*
+        * We will look at ultiple cases in which the reference fields will
+        * have to change. We will check the conditions in the order they are
+        * listed. 
+        * 
+        * if list is empty: 
+        *   head, tail, and cursor change
+        * else if current is null or current is head
+        *   head and cursor change
+        * else
+        *   add element after precursor, cursor changes
+        */
+
+        // removeCurrent()
+
+        /*
+         * 
+         */
 }
