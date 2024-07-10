@@ -75,6 +75,25 @@ public class DoubleLinkedSeq
         // removeCurrent()
 
         /*
+         * We have to be careful when checking cases in which to remove the
+         * current element from a sequence. Pictures should be drawn to 
+         * understand the changes in certain circumstances. 
          * 
+         * if there is only one element:
+         *      head, tail, and cursor change
+         * else if current is first
+         *      head and cursor change
+         * else if current at end
+         *      precursor, cursor, and tail change
+         * else
+         *      cursor changes
+         */
+
+        // addAfter()
+
+        /*
+         * We have to consider the cases in which addAfter should be used. We
+         * have to list them in order we will check them and look at changed
+         * references within each case.
          */
 }
