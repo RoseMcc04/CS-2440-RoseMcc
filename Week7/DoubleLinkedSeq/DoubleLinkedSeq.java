@@ -95,5 +95,40 @@ public class DoubleLinkedSeq
          * We have to consider the cases in which addAfter should be used. We
          * have to list them in order we will check them and look at changed
          * references within each case.
+         * 
+         * if list is empty:
+         *      head, tail, and cursor change
+         * else if cursor is null or cursor is tail:
+         *      precursor, cursor, and tail change
+         * else:
+         *      precursor and cursor change
+         */
+
+        // clone()
+
+        /*
+         * The clone() method this time requires special consideration. For 
+         * each of the following cases, we will describe how to use certain
+         * copy methods to copy the sequence and how we will set the reference
+         * fields.
+         * 
+         * if (cursor == null):
+         *      copyInfo = DoubleNode.listCopyWithTail(head)
+         *      answer.head = copyInfo[0];
+         *      answer.tail = copyInfo[1];
+         *      answer.cursor = null;
+         *      answer.precursor = null;
+         * else if (cursor == head):
+         *      copyInfo = DoubleNode.listCopyWithTail(head);
+         *      answer.head = copyInfo[0];
+         *      answer.tail = copyInfo[1];
+         *      answer.cursor = answer.head;
+         *      answer.precursor = null;
+         * else:
+         *      copyInfo = DoubleNode.listPart(head, precursor);
+         *      copyInfo2 = DoubleNode.listPart(cursor, tail);
+         *      answer.head = copyInfo[0];
+         *      answer.tail = copyInfo[1];
+         *      answer.precursor.setLink(answer.cursor);
          */
 }
