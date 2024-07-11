@@ -117,7 +117,7 @@ public class GenericsNotes
      * Method example --> 
      */
 
-    class Node<T> 
+    public class Node<T> 
     {
         private T data;
         private Node<T> link;
@@ -148,4 +148,6 @@ public class GenericsNotes
             return this.link;
         }
     }
+
+    // Warnings in Generics
 }
