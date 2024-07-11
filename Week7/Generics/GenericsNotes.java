@@ -2,7 +2,7 @@ package Week7.Generics;
 
 /**
  * @author Rose McCormack
- * @version 10 July 2024
+ * @version 11 July 2024
  */
 public class GenericsNotes 
 {
@@ -99,5 +99,19 @@ public class GenericsNotes
      * 
      * No casting! --> String s = process("vv"); 
      *                 vs. String s = (String) process("vv");
+     * 
+     * The same way that a generic method can depend on the unspecified data 
+     * (at compile time) underlying data type, a generic class can do the same 
+     * thing. The underlying logic of the container data structure does not
+     * depend on what type of data the container holds. 
+     */
+
+    // How do we Make a Class Generic? 
+    
+    /*
+     * We make a class generic by putting a generic type parameter (such as E 
+     * or T) in angle brackets immediately after the class name. 
+     * 
+     * Example --> public class Node<T> implements Cloneable
      */
 }
