@@ -150,4 +150,27 @@ public class GenericsNotes
     }
 
     // Warnings in Generics
+
+    /*
+     * The Java compiler issues a warning when it compiles code with generic
+     * types to remind us that we need to be careful in order to avoid code
+     * that crashes at runtime. When you have an array of Object and is 
+     * explicitly cast as a generic type, Java will issue a warning that this
+     * cast is "unchecked". 
+     * 
+     * Java explains that at runtime, the compiler will be unable to verify 
+     * that the type of object matches the return statement or the type of the
+     * variable you are assigning it to (due to erasure). 
+     * 
+     * If we are careful, we will know the types that will match. We can also 
+     * suppress these warnings by adding @SuppressWarnings("unchecked") before
+     * any generic method. 
+     * 
+     * We cannot create arrays of a generic type. This, variable arity methods 
+     * will generate warnings when they are of a generic type, since Java has 
+     * to build an array to hold the values. We can suppress these warnings by 
+     * stating @SafeVarargs above any method that declares a variable arity, or
+     * any method that calls another method that has a variable arity parameter 
+     * list. 
+     */
 }
