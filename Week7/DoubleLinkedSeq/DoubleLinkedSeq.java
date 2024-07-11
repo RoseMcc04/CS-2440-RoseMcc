@@ -129,6 +129,6 @@ public class DoubleLinkedSeq
          *      copyInfo2 = DoubleNode.listPart(cursor, tail);
          *      answer.head = copyInfo[0];
          *      answer.tail = copyInfo[1];
-         *      answer.precursor.setLink(answer.cursor);
+         *      answer.precursor.setLink(answer.cursor); 
          */
 }

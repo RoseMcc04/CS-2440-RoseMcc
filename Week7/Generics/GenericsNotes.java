@@ -45,5 +45,10 @@ public class GenericsNotes
      * byte --> Byte; short --> Short; int --> Integer; long --> Long, 
      * float --> Float; double --> Double; char --> Character; 
      * boolean --> boolean
+     * 
+     * Java allows you to treat a wrapper variable as if it were a primitive 
+     * with normal declarations. Integer x = new Integer(5); is declaring an
+     * Integer object whereas Integer y = 7; will be used as a primitive by the
+     * compiler. 
      */
 }
