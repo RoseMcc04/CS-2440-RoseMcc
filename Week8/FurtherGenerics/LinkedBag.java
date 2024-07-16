@@ -72,4 +72,67 @@ public class LinkedBag<T> implements Cloneable
         answer.head = Node.listCopy(head);
         return answer;
     }
+
+    /**
+     * @param target The element where occurrances are being counted with. 
+     * @return This method returns the number of instances of the object being
+     * counted.
+     */
+    public int countOccurrances(T target) 
+    {
+        int answer = 0;
+        Node<T> cursor = Node.listSearch(head, target);
+        while (cursor != null) 
+        {
+            answer++;
+            cursor = cursor.getLink();
+            cursor = Node.listSearch(head, target);
+        }
+        return answer;
+    }
+
+    /**
+     * @return This method returns a random element from the linked bag object.
+     */
+    public T grab() 
+    {
+        int i;
+        Node<T> cursor;
+        if (manyNodes == 0) 
+        {
+            throw new IllegalStateException("Bag size is zero.");
+        }
+        i = (int) (Math.random() * manyNodes) + 1;
+        cursor = Node.listPosition(head, i);
+        return cursor.getData();
+    }
+
+    /**
+     * @param target The element we would like to remove. 
+     * @return This method returns if the target to be removed was found or 
+     * not. 
+     */
+    public boolean remove(T target) 
+    {
+        Node<T> targetNode = Node.listSearch(head, target);
+        if (targetNode == null) 
+        {
+            return false;
+        }
+        else 
+        {
+            targetNode.setData(head.getData());
+            head = head.getLink();
+            manyNodes--;
+            return true;
+        }
+    }
+
+    /**
+     * @return This method returns the number of elements in the bag. 
+     */
+    public int size() 
+    {
+        return manyNodes;
+    }
 }
