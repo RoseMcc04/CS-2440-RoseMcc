@@ -52,4 +52,24 @@ public class LinkedBag<T> implements Cloneable
             add(i);
         }
     }
+
+    /**
+     * This method will allow us to create a deep copy of our linked bag
+     * object.
+     */
+    @SuppressWarnings("unchecked")
+    public Object clone() 
+    {
+        LinkedBag<T> answer;
+        try 
+        {
+            answer = (LinkedBag<T>) super.clone();
+        }
+        catch (CloneNotSupportedException e) 
+        {
+            throw new RuntimeException("CloneNotSupportedException found!");
+        }
+        answer.head = Node.listCopy(head);
+        return answer;
+    }
 }
