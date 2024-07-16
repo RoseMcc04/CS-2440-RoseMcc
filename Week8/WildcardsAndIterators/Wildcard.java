@@ -58,4 +58,17 @@ public class Wildcard
      * 
      * public class SortedList<E extends Comparable<? super E>>
      */
+
+    // Generic Interfaces
+
+    /*
+     * Generic interfaces are not much different from regular interfaces, except a
+     * class that implements a generic interface must be generic in itself. An 
+     * example would be the Iterator<E> interface. Any class that implements the
+     * Iterator interface must implement the following methods:
+     * 
+     * public boolean hasNext()
+     * public E next()
+     * public void remove()
+     */
 }
