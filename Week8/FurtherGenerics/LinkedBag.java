@@ -1,9 +1,9 @@
 package Week8.FurtherGenerics;
 
-public class LinkedBag<E> implements Cloneable
+public class LinkedBag<T> implements Cloneable
 {
     private int manyNodes;
-    private Node<E> head;
+    private Node<T> head;
 
 
     /**
@@ -18,9 +18,9 @@ public class LinkedBag<E> implements Cloneable
     /**
      * @param element This method adds a new element to the linked bag object.
      */
-    public void add(E element) 
+    public void add(T element) 
     {
-        head = new Node<E>(element, head);
+        head = new Node<T>(element, head);
         manyNodes++;
     }
 
@@ -28,9 +28,9 @@ public class LinkedBag<E> implements Cloneable
      * @param addend This method adds another linked bag object to our 
      * current linked bag.
      */
-    public void addAll(LinkedBag<E> addend) 
+    public void addAll(LinkedBag<T> addend) 
     {
-        Node<E>[] copyInfo;
+        Node<T>[] copyInfo;
         if (addend.manyNodes > 0) 
         {
             copyInfo = Node.listCopyWithTail(addend.head);
@@ -44,9 +44,10 @@ public class LinkedBag<E> implements Cloneable
      * @param elements This method allows us to add multiple elements to the
      * linked bag object.
      */
-    public void addMany(Node<E>... elements) 
+    @SuppressWarnings("unchecked")
+    public void addMany(T... elements) 
     {
-        for (E i : elements) 
+        for (T i : elements) 
         {
             add(i);
         }
