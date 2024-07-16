@@ -28,4 +28,34 @@ public class Wildcard
      * we cannot write a method that takes a parameter with an unknown type and 
      * add elements to it. This would procude a compilation error. 
      */
+
+    // Comparable
+
+    /*
+     * Sometimes, we want to write a method thay receives an array of elements 
+     * and sorts them in order. Sorting for ints, doubles, and Strings should
+     * be about the same. It seems like we could use generics, but we need to 
+     * be able to compare the things we are sorting. 
+     * 
+     * Objects are often compared to each other using compareTo(). However, not 
+     * all classes implement the compareTo() method, and if the type is not valid, 
+     * then our code will not work. 
+     * 
+     * Java allows a special suntax that allows us to specify that the generic must
+     * implement a certain interface: 
+     * 
+     * public static <T extends Comparable<? super T>> void sort(T[] arrayToSort)
+     * {
+     *      // code for sort
+     * }
+     * 
+     * The "weird" part in the set of brackets is saying that the sort method is 
+     * a generic method, the generic type is T, and that whatever type we substitute
+     * for T must either implement Comparable<T> itself, or a subclass of T implements
+     * the Comparable<T> interface.
+     * 
+     * We can also write generic classes that hold a similar requirement: 
+     * 
+     * public class SortedList<E extends Comparable<? super E>>
+     */
 }
