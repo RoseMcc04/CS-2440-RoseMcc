@@ -9,6 +9,20 @@ import java.util.Stack;
  */
 public class StackApplications 
 {
+    // Example: Balanced Parentheses
+
+    /*
+     * We will make an algorithm that checks an expression to see if the 
+     * parentheses match correctly. It allows three kinds of parentheses: (), 
+     * [], and {}. Any other symbols are ignored. 
+     * 
+     * Ex. 1: "{[X + Y*(Z + 7)]*(A + B)}" --> returns true since each of the
+     * left parentheses corresponds to a right parentheses
+     * 
+     * Ex. 2: "((X + Y*(Z + 7)*[A + B])" --> returns false since one of the
+     * parentheses is missing its right counterpart
+     */
+
     /**
      * @param expression String input the user wants to see if it is balanced 
      * or not
