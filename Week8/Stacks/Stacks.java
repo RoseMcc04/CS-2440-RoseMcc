@@ -39,4 +39,14 @@ public class Stacks
      */
 
     // More Notes on Stacks
+
+    /*
+     * If a user attempts to peek() or pop() an empty stack, it results in an
+     * error condition called stack underflow. There is an exception in Java
+     * called EmptyStackException that we will throw from our implementations 
+     * of peek() and pop(). 
+     * 
+     * Stacks are useful, but the extent of their scope will be covered in 
+     * future coursework.  
+     */
 }
