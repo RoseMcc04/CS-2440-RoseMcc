@@ -40,10 +40,10 @@ public class StackApplications
     /*
      * 1. ((4 + 5) * (3 - (8 / 4)))
      *  - Prefix: * + 4 5 - 3 / 8 4
-     *  - Postfix: 4 5 + * 3 - 8 4 /
+     *  - Postfix: 4 5 + 3 8 4 / - *
      * 
      * 2. ((8 - (5 * 2)) + (4 * 6))
-     *   - Prefix: 
-     *   - Postfix: 5 - 2 * 4 6 * + 
+     *   - Prefix: + - 8 * 5 2 * 4 6
+     *   - Postfix: 8 5 2 * - 4 6 * +
      */
 }
