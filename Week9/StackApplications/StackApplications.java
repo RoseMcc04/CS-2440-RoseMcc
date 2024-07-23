@@ -46,4 +46,15 @@ public class StackApplications
      *   - Prefix: + - 8 * 5 2 * 4 6
      *   - Postfix: 8 5 2 * - 4 6 * +
      */
+
+    // Evaluating Postfix
+
+    /*
+     * Initialize a stack of double numbers
+     * while there is more of the expression to read
+     *      if next input is a number
+     *          read next input and push it onto the stack
+     *      else
+     *          
+     */
 }
