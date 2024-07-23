@@ -55,6 +55,38 @@ public class StackApplications
      *      if next input is a number
      *          read next input and push it onto the stack
      *      else
-     *          
+     *          read next char which is an operation symbol
+     *          pop two numbers off of the stack
+     *          combine the numbers with the operation (second number popped
+     *          is left operand)
+     *          push subsequent result onto stack
+     */
+
+    // Converting Infix to Postfix
+
+    /*
+     * Initialize a stack of chars to hold operations and parentheses while 
+     * there is more of the expression to read
+     * while there is more of the expression to read
+     *      if next input is a number
+     *          read the number and write it to output followed by a space
+     *      else
+     *          read the next symbol
+     *          if symbol is '('
+     *              push it onto stack
+     *          else if symbol is an operator
+     *              while stack is not empty and char at top of stack is not 
+     *              '(' and operator at top of stack has equal or higher 
+     *              precedence than the symbol
+     *                  pop operator off of stack and write it to output
+     *              push symbol onto the stack
+     *          else if symbol is ')'
+     *              while stack is not empty and char is not '('
+     *                  pop operator off the stack and write to output
+     *              pop stack and discard '('
+     *          else
+     *              there is an error
+     * while stack is not empty
+     *      pop stack and write to output
      */
 }
