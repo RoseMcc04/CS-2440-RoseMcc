@@ -79,4 +79,15 @@ public class RadixSort
         }
         return data;
     }
+
+    // Syntax Note
+
+    /*
+     * Arrays of Stacks or Queues or LinkedLists are very useful. Java gives 
+     * compile time errors when we try to create arrays of generic types. We
+     * can do the following:
+     * 
+     * Queue<Integer> bucket = new LinkedList[10];
+     * bucket[i] = new LinkedList<Integer>();
+     */
 }
