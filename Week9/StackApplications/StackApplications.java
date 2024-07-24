@@ -1,5 +1,9 @@
 package Week9.StackApplications;
 
+/**
+ * @author Rose Adriana McCormack
+ * @version 23 July 2024
+ */
 public class StackApplications 
 {
     // Infix Notation
