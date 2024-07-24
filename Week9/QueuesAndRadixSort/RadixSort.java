@@ -35,7 +35,7 @@ public class RadixSort
         Queue<Integer> data = new LinkedList<Integer>();
         for (int i = 0; i < 10; i++) 
         {
-            data.add((int) (Math.random() * 999) + 1);
+            data.add((int) (Math.random() * 99) + 1);
         }
         System.out.println(data);
         System.out.println();
