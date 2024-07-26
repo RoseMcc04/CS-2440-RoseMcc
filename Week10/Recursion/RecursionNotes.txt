@@ -30,4 +30,22 @@ public void printInReverse(Node<String> r)
     System.out.println(r.getData());
 }
 
-Student Answer: 
+Student Answer: The method does not account for r being null which would mean 
+                we could return a StackOverflowError. 
+
+public static int fib(int n) 
+{
+    if (n < 2) 
+    {
+        return 1;
+    }
+    else 
+    {
+        return fib(n + 1) - fib(n - 1);
+    }
+}
+
+Student Answer: The answer would always return  difference of two separate
+                factorials instead of the input multiplying precedig inputs.
+                This means our answer would become infinite and induce a 
+                StackOverflowError.   
