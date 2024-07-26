@@ -1,0 +1,11 @@
+What is recursion?
+
+- A recursive method is a method that directly or indirectly calls 
+  itself.
+- Recursion should be considered when a problem can be solved by solving
+  a smaller instance of the same problem and then changing it a little. The 
+  smaller instance is solved the same way. 
+- The small case is called the base case. A recursive algorithm should always
+  have a base case. Eventually, the problem has to get small enough to be 
+  solved on its own (without recursion). 
+- Each recursive call should simplify the problem (get closer to the base case). 
