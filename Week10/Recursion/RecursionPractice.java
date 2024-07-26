@@ -19,6 +19,8 @@ public class RecursionPractice
         // Static method executed within own class does not need class 
         // specification for execution.
         System.out.println(seenThisBefore(233, 11));
+
+        System.out.println(fact(3));
     }
 
     /**
@@ -57,5 +59,19 @@ public class RecursionPractice
         {
             return "" + seenThisBefore(n / b, b) + digit.charAt(n % b);
         }
+    }
+
+    /**
+     * @param n Integer input for factorial
+     * @return This recursive method will allow us to input an integer and 
+     * return its factorial. 
+     */
+    public static int fact(int n) 
+    {
+        if (n <= 0) 
+        {
+            return 1;
+        }
+        return n * fact(n - 1);
     }
 }
