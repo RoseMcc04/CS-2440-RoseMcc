@@ -1,4 +1,4 @@
-What is recursion?
+What is Recursion?
 
 - A recursive method is a method that directly or indirectly calls 
   itself.
@@ -9,3 +9,25 @@ What is recursion?
   have a base case. Eventually, the problem has to get small enough to be 
   solved on its own (without recursion). 
 - Each recursive call should simplify the problem (get closer to the base case). 
+
+Execution/Run-Time Stack
+
+- The execution stack is used to help manage control flow between methods as a 
+  program runs. Each method that gets called has an activation record on the stack. 
+  The method at the top is the method currently being executed. When it is finished, 
+  its activation record is popped off. Activation records have space for the method's 
+  parameters and variables, plus fields to manage control flow. This helps us understand
+  how recursion is managed. 
+
+Bad Recursive Methods 
+
+- We will look at methods that do not implement recursion properly. This will help us 
+  avoid future mistakes while implementing recursion. 
+
+public void printInReverse(Node<String> r) 
+{
+    printInReverse(r.getLink());
+    System.out.println(r.getData());
+}
+
+Student Answer: 
