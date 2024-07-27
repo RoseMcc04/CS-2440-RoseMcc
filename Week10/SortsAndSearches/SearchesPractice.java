@@ -41,11 +41,14 @@ public class SearchesPractice
     {
         for (int i = 0; i < arr.length; i++) 
         {
+            // Compares objects to see if they are the same
             if (value.compareTo(arr[i]) == 0) 
             {
+                // Object was found
                 return true;
             }
         }
+        // Object was not found
         return false;
     }
 
@@ -54,7 +57,7 @@ public class SearchesPractice
      * parameters for our search technique. 
      * @param arr Array structure search is performed upon
      * @param first The first element you want to look for
-     * @param size 
+     * @param size The size of the 
      * @param target The object we want to find in the array the searched is 
      * performed upon
      * @return This method returns the index where the target is found at.
@@ -67,7 +70,9 @@ public class SearchesPractice
         {
             return -1;
         }
+        // Looks through list to split list
         int middle = first + (size / 2);
+        // Compares middle to potentially avoid worst-case scenario
         int value = target.compareTo(arr[middle]);
         if (value == 0) 
         {
@@ -75,8 +80,10 @@ public class SearchesPractice
         }
         if (value < 0) 
         {
+            // Looks through left half of array structure
             return recursiveBinarySearch(arr, first, size / 2, target);
         }
+        // Looks through right half of array structure
         return recursiveBinarySearch(arr, middle + 1, (size - 1) / 2, target);
     }
 
