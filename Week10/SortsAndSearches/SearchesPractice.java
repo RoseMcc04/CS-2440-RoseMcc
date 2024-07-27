@@ -92,4 +92,45 @@ public class SearchesPractice
         return recursiveBinarySearch(arr, middle + 1, (size - 1) / 2, target);
     }
 
+    /**
+     * @precondition The array and target are both valid in Java. 
+     * @param arr Array the user wants to search
+     * @param target Object being searched for
+     * @return This method returns the index where the target is at in the 
+     * array.
+     * @postcondition The value was found in the array using a binary search.
+     * 
+     * Complexity: O(log(n)) due to reduction of search space after each step.
+     */
+    public static <T extends Comparable<? super T>> int 
+        regularBinarySearch(T[] arr, T target) 
+    {
+        int low = 0;
+        int high = arr.length - 1;
+        int middle;
+        int value;
+        // Search between low and high, inclusive
+        while(low <= high) 
+        {
+            middle = (low + high) / 2;
+            value = target.compareTo(arr[middle]);
+            if (value == 0) 
+            {
+                // Target is the middle element
+                return middle;
+            }
+            else if (value < 0) 
+            {
+                // Target before middle element
+                high = middle - 1;
+            }
+            else 
+            {
+                // Target after middle element
+                low = middle + 1;
+            }
+        }
+        // Target is not in the array
+        return -1;
+    }
 }
