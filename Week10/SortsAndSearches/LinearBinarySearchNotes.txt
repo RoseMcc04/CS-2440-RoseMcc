@@ -5,3 +5,18 @@ Sequential/Linear Search
   arrays of ints. We can use comparison operators (==, <=, <, >=, >, !=)
   with ints. If we want to work on an array of objects, we would need to 
   also implement the compareTo() method in the class.
+
+Binary Search 
+
+- If you have a sorted set of baseball cards, you will have a much easier
+  time finding a particular card. Binary search is a method that works 
+  roughly like this on a set of baseball cards. 
+
+  1. If your unsearched set is empty, declare failure. If there is at least
+     one card left in the unsearched portion of your set, see if what you 
+     are looking for is the "middle" card. 
+  2. If it is, you've found it. 
+  3. If it is not, and the middle card comes after the one you are looking 
+     for, restrict your search to the left half of the set and go to step 1.
+  4. If it is not, and the middle card comes before the one you are looking 
+     for, restrict your search to the right half of the step and go to step 1. 
