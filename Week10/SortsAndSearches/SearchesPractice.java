@@ -56,8 +56,8 @@ public class SearchesPractice
      * @precondition We should have a proper array along with more specified
      * parameters for our search technique. 
      * @param arr Array structure search is performed upon
-     * @param first The first element you want to look for
-     * @param size The size of the 
+     * @param first The first element in the section you want to search
+     * @param size The size of the section you want to search
      * @param target The object we want to find in the array the searched is 
      * performed upon
      * @return This method returns the index where the target is found at.
