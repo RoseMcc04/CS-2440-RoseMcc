@@ -16,6 +16,15 @@ public class SearchesPractice
         Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         boolean valuesResult = linearSearch(values, 4);
         System.out.println(valuesResult);
+
+        // Demonstrating recursive binary search
+        // Slightly more flavored taco night shopping list, check for mangoes
+        String[] words = {"tortilla chips", "salsa", "cilantro", "limes", 
+            "corn tortillas", "steak", "Jarritos", "mangoes", "green chilis", 
+            "bananas", "guava juice", "tamales"};
+        int wordsResult = recursiveBinarySearch(words, 0, words.length - 1, 
+            "mangoes");
+        System.out.println(wordsResult);
     }
 
     /**
@@ -38,6 +47,37 @@ public class SearchesPractice
             }
         }
         return false;
+    }
+
+    /**
+     * @precondition We should have a proper array along with more specified
+     * parameters for our search technique. 
+     * @param arr Array structure search is performed upon
+     * @param first The first element you want to look for
+     * @param size 
+     * @param target The object we want to find in the array the searched is 
+     * performed upon
+     * @return This method returns the index where the target is found at.
+     * @postcondition The value was found in the array using a binary search
+     */
+    public static <T extends Comparable<? super T>> int 
+        recursiveBinarySearch(T[] arr, int first, int size, T target) 
+    {
+        if (size <= 0) 
+        {
+            return -1;
+        }
+        int middle = first + (size / 2);
+        int value = target.compareTo(arr[middle]);
+        if (value == 0) 
+        {
+            return middle;
+        }
+        if (value < 0) 
+        {
+            return recursiveBinarySearch(arr, first, size / 2, target);
+        }
+        return recursiveBinarySearch(arr, middle + 1, (size - 1) / 2, target);
     }
 
 }
