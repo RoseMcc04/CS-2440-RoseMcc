@@ -35,6 +35,8 @@ public class SearchesPractice
      * @return This specific method will return true if we can find the object,
      * and false if we cannot find the object. 
      * @postcondition The value should be in the array. 
+     * 
+     * Complexity: O(n) due to iteration through every element possible. 
      */
     public static <T extends Comparable<? super T>> boolean 
         linearSearch(T[] arr, T value)  
@@ -62,6 +64,9 @@ public class SearchesPractice
      * performed upon
      * @return This method returns the index where the target is found at.
      * @postcondition The value was found in the array using a binary search
+     * 
+     * Complexity: O(log(n)) due to reduction of search space by one-half at 
+     * each step. 
      */
     public static <T extends Comparable<? super T>> int 
         recursiveBinarySearch(T[] arr, int first, int size, T target) 
