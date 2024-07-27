@@ -1,0 +1,7 @@
+Sequential/Linear Search
+
+- The technique you have to use where the data you are searching through
+  is in no particular order. The searches often used in oractice involve
+  arrays of ints. We can use comparison operators (==, <=, <, >=, >, !=)
+  with ints. If we want to work on an array of objects, we would need to 
+  also implement the compareTo() method in the class.
