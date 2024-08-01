@@ -12,7 +12,7 @@ public class SortsPractice
      * @param i First index to be swapped (often lesser than)
      * @param j Second index to be swapped (often greater than)
      */
-    private <T> void swap(T[] arr, int i, int j) 
+    private static <T> void swap(T[] arr, int i, int j) 
     {
         T temp = arr[i];
         arr[i] = arr[j];
@@ -30,7 +30,7 @@ public class SortsPractice
      * Reasoning: We have to perform n iterations to find the smallest element
      * for all n elements. 
      */
-    public <T extends Comparable<? super T>> void selectionSort(T[] arr) 
+    public static <T extends Comparable<? super T>> void selectionSort(T[] arr) 
     {
         for (int i = 0; i < arr.length - 1; i++) 
         {
@@ -59,7 +59,7 @@ public class SortsPractice
      * 
      * Reasoning: We have to perform n swaps for n elements. 
      */
-    public <T extends Comparable<? super T>> void insertionSort(T[] arr) 
+    public static <T extends Comparable<? super T>> void insertionSort(T[] arr) 
     {
         for (int i = 1; i < arr.length; i++) 
         {
@@ -84,7 +84,7 @@ public class SortsPractice
      * 
      * Reasining: We have n swaps per iteration and it iterates n times. 
      */
-    public <T extends Comparable<? super T>> void bubbleSort(T[] arr) 
+    public static <T extends Comparable<? super T>> void bubbleSort(T[] arr) 
     {
         for (int i = 0; i < arr.length - 1; i++) 
         {
